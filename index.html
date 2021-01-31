@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>testing</title>
-    <style>
-        html{
-            max-zoom: .5;
-        }
-    </style>
-</head>
-<body>
-    
-    <script>
-        let body = document.body;
-        let DPR = document.createElement("div");
-        DPR.textContent = window.devicePixelRatio;
-        body.appendChild(DPR);
-        
-
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>testing</title>
+    </head>
+    <body>
+        <script>
+            let body = document.body;
+            let div = document.createElement("div");
+            div.textContent = `screen avail height: ${screen.availHeight}\n screen aval width: ${screen.availWidth}`;
+            body.appendChild(DPR);
+        </script>
+    </body>
 </html>
