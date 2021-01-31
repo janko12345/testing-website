@@ -8,6 +8,7 @@
     <style>
         .test {
             height: 100vh;
+            background: lightblue;
         }
     </style>
     <body>
@@ -17,6 +18,8 @@
             // let div = document.createElement("div");
             // div.textContent = `screen avail height: ${screen.availHeight}\n screen aval width: ${screen.availWidth}`;
             // body.appendChild(div);
+            let test = document.querySelector(".test");
+            test.textContent = test.clientHeight;
         </script>
     </body>
 </html>
