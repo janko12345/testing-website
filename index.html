@@ -20,13 +20,21 @@
     </style>
     <body>
         <div class="test"></div>
+        <p class="font-family"></p>
+
         <script>
             // let body = document.body;
             // let div = document.createElement("div");
             // div.textContent = `screen avail height: ${screen.availHeight}\n screen aval width: ${screen.availWidth}`;
             // body.appendChild(div);
             let test = document.querySelector(".test");
-            test.textContent = `inner height: ${innerHeight}\n, 100vh height: ${test.clientHeight}, avail height: ${screen.availHeight}`;
+            test.textContent = `inner height: ${innerHeight}, 100vh height: ${test.clientHeight}, avail height: ${screen.availHeight}`;
+
+            let ffElement = document.querySelector(".font-family");
+            let ff = getComputedStyle(document.querySelector("html"))
+                .fontFamily;
+            ffElement.textContent = ff;
+            console.log(ff);
         </script>
     </body>
 </html>
