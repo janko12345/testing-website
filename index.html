@@ -16,12 +16,10 @@
         .test {
             height: 100vh;
             width: 100vw;
-            background: lightblue;
         }
     </style>
     <body>
         <div class="test"></div>
-        <p class="font-family"></p>
 
         <script>
             // let body = document.body;
@@ -29,13 +27,12 @@
             // div.textContent = `screen avail height: ${screen.availHeight}\n screen aval width: ${screen.availWidth}`;
             // body.appendChild(div);
             let test = document.querySelector(".test");
-            test.textContent = `inner height: ${innerHeight}, 100vh height: ${test.clientHeight}, avail height: ${screen.availHeight}, inner width: ${innerWidth}, 100vw: ${test.clientWidth}, avail width: ${screen.availWidth}`;
+            test.textContent = `inner height: ${innerHeight}, 100vh height: ${test.clientHeight}, avail height: ${screen.availHeight}, inner width: ${innerWidth}, 100vw: ${test.clientWidth}, avail width: ${screen.availWidth}, `;
 
-            let ffElement = document.querySelector(".font-family");
-            let ff = getComputedStyle(document.querySelector("html"))
-                .fontFamily;
-            ffElement.textContent = ff;
-            console.log(ff);
+            let htmlComputed = getComputedStyle(document.querySelector("html"));
+            let ff = htmlComputed.fontFamily;
+            let fs = htmlComputed.fontSize;
+            test.textContent += `font family: ${ff}, root font size: ${fs}, `;
         </script>
     </body>
 </html>
